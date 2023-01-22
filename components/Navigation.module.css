@@ -1,0 +1,23 @@
+.header {
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.navigation a {
+  color: #f0f0f0;
+  font-size: 16px;
+}
+
+.navigation a:hover {
+  color: #dcdcdc;
+}
