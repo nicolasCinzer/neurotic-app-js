@@ -11,22 +11,17 @@ body {
   font-family: monospace;
 }
 
-body {
-  padding: 100px;
-  max-width: 800px;
-  margin: 0 auto;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: black;
+    background: #212121;
   }
 }
