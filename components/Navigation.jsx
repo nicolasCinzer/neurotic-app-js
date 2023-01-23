@@ -1,22 +1,23 @@
 import Link from 'next/link';
 import style from './Navigation.module.css';
+import { dm_sans } from './font';
 
 const links = [
-  { label: 'Home', route: '/' },
+  { label: 'Neurotic', route: '/' },
   {
-    label: 'About',
-    route: '/about',
+    label: 'Gym',
+    route: '/gym',
   },
   {
-    label: 'Posts',
-    route: '/posts',
+    label: 'Budget',
+    route: '/budget',
   },
 ];
 
 export default function Navigation() {
   return (
     <header className={style.header}>
-      <nav>
+      <nav className={dm_sans.variable}>
         <ul className={style.navigation}>
           {links.map(({ label, route }) => (
             <li key={route}>

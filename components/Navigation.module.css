@@ -1,8 +1,6 @@
 .header {
-  border: 2px solid rgb(240, 240, 240);
-  border-radius: 4px;
+  border-bottom: 1px solid #484848;
   padding: 16px;
-  margin-bottom: 12px;
 }
 
 .navigation {
@@ -11,6 +9,7 @@
   justify-content: center;
   text-align: center;
   gap: 32px;
+  font-family: var(--font-dmsans), monospace;
 }
 
 .navigation a {
