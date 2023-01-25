@@ -5,9 +5,10 @@
 .itemBody {
   display: grid;
   grid-template-columns: 6fr 1fr 1fr 1fr;
-  border-bottom: 2px solid #ffffff0a;
-  border-radius: 16px;
+  border-bottom: 3px solid #0000003b;
+  border-radius: 29px;
   margin-bottom: 12px;
+  background: #262626e6;
 }
 
 .itemTitle::before {

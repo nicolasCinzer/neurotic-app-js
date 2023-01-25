@@ -1,25 +1,19 @@
 'use client';
 
-import itemStyle from './BudgetList.module.css';
-import { useState, useEffect } from 'react';
+import itemStyle from './css/BudgetList.module.css';
+import { useRouter } from 'next/navigation';
 
-const sample = [
-  { title: 'Mercado', tag: 'Market', money: '5000 COP', date: '24/1/2023' },
-  { title: 'Proteina', tag: 'Gym', money: '5000 COP', date: '24/1/2023' },
-  { title: 'Ropa', tag: 'Clothes', money: '5000 COP', date: '24/1/2023' },
-];
-
-export default function ItemList({ title, tag, money, date }) {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    setItems(sample);
-  }, []);
+export default function ItemList({ list }) {
+  const router = useRouter();
 
   return (
     <ul className={itemStyle.listBody}>
-      {sample.map(({ title, tag, money, date }) => (
-        <li className={itemStyle.itemBody}>
+      {list.map(({ id, title, tag, money, date }) => (
+        <li
+          className={itemStyle.itemBody}
+          key={id}
+          onClick={() => router.push(`/budget/${id}`)}
+        >
           <div className={itemStyle.itemTitle}>{title}</div>
           <div className={itemStyle.itemTagBox}>
             <div className={itemStyle.itemTag}>{tag}</div>

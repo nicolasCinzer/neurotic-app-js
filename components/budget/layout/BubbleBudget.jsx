@@ -1,11 +1,11 @@
-import bubbleStyle from './BubbleBudget.module.css';
+import bubbleStyle from './css/BubbleBudget.module.css';
 import { dm_sans } from '../../font';
 
 export default function BubbleBudget() {
   return (
     <div className={bubbleStyle.currentBudget}>
       <div>Current Budget</div>
-      <div className={bubbleStyle.budget}>100.000 COP</div>
+      <div className={bubbleStyle.budget}>100.000.000 COP</div>
     </div>
   );
 }
