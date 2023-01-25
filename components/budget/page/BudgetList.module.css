@@ -1,0 +1,51 @@
+.listBody {
+  width: 90%;
+}
+
+.itemBody {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  border-bottom: 2px solid #ffffff0a;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.itemTitle::before {
+  content: '▲';
+  padding: 5px 12px 0px 0px;
+  font-size: 16px;
+}
+
+.itemTitle {
+  display: flex;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-family: var(--font-dmsans);
+}
+
+.itemFields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  font-size: 14px;
+  font-family: var(--font-dmsans);
+}
+
+.itemTagBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: var(--font-dmsans);
+  background-color: blue;
+  border: 0;
+  border-radius: 24px;
+}

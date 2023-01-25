@@ -1,0 +1,21 @@
+.currentBudget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 16px;
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  gap: 4px;
+  font-size: 22px;
+  background: #262626e6;
+  font-family: var(--font-dmsans);
+  -webkit-box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.04);
+}
+
+.budget {
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.17);
+}
