@@ -2,7 +2,7 @@ import { DM_Sans as DMSans } from '@next/font/google';
 import { Space_Grotesk } from '@next/font/google';
 
 const dm_sans = DMSans({
-  weight: '400',
+  weight: ['400', '500'],
   subsets: ['latin'],
   variable: '--font-dmsans',
 });
