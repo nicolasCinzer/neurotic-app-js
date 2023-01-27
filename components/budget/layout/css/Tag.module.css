@@ -1,0 +1,8 @@
+.tag {
+  border: 1px solid #353535;
+  border-radius: 42px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-family: var(--font-dmsans);
+  background: #282828;
+}

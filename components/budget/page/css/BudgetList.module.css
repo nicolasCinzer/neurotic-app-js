@@ -1,5 +1,9 @@
 .listBody {
-  width: 90%;
+  width: 96%;
+  overflow-y: scroll;
+  max-height: 70vh;
+  scrollbar-width: none;
+  margin-bottom: 6px;
 }
 
 .itemBody {
