@@ -6,9 +6,11 @@
 
 html,
 body {
+  max-height: 100vh;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: monospace;
+  scrollbar-width: none;
 }
 
 a {
