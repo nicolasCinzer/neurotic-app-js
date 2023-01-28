@@ -5,6 +5,7 @@ import WalletsList from 'components/budget/layout/WalletsList';
 import layoutStyle from './css/BudgetLayout.module.css';
 import { dm_sans } from '../../components/font';
 import Tags from 'components/budget/layout/Tags';
+import Filters from 'components/budget/layout/Filters';
 
 export default function BudgetLayout({ children }) {
   return (
@@ -20,9 +21,10 @@ export default function BudgetLayout({ children }) {
         </div>
         <div className={layoutStyle.budgetBody}>
           <WalletsList />
-          <div>
+          <div className={layoutStyle.budgetList}>
             {children}
             <Tags />
+            <Filters />
           </div>
         </div>
       </div>
