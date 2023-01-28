@@ -12,6 +12,15 @@
   font-family: var(--font-dmsans);
   box-shadow: 0px 6px 15px 0px #0000003b;
   margin-right: 30px;
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+}
+
+.currentBudget:hover {
+  transform: translatex(-20px);
+  -webkit-transform: translatex(-20px);
+  -moz-transform: translatex(-20px);
 }
 
 .budget {
@@ -20,3 +29,8 @@
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.17);
 }
 
+.transLeft {
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+}
