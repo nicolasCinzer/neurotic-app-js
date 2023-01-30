@@ -8,13 +8,17 @@ import Filters from './Filters';
 
 export default function SearchEngine({ setSearchKey }) {
   const [value, setValue] = useState('');
-  const [currentTag, setCurrentTag] = useState('Name');
+  const [currentTag, setCurrentTag] = useState('Title');
 
   const handleChange = ({ target }) => {
-    let value = target.value;
-    
-    setSearchKey({ key: `${value}`, filter: currentTag });
-    setValue(value);
+    setValue(target.value);
+  };
+
+  const handleKeyDown = ({ key }) => {
+    if (key === 'Enter') {
+      console.log(key);
+      setSearchKey({ key: `${value}`, filter: currentTag });
+    }
   };
 
   return (
@@ -25,6 +29,7 @@ export default function SearchEngine({ setSearchKey }) {
           className={searchStyle.inputNode}
           placeholder={currentTag}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           value={value}
         />
       </div>
@@ -32,6 +37,7 @@ export default function SearchEngine({ setSearchKey }) {
         currentTag={currentTag}
         setCurrentTag={setCurrentTag}
         setValue={setValue}
+        setSearchKey={setSearchKey}
       />
     </div>
   );

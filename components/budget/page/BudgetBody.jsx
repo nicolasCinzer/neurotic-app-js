@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import budgetStyle from './css/BudgetBody.module.css';
 
@@ -11,6 +11,23 @@ import CRUD from './CRUD';
 export default function Budget({ budgetList }) {
   const [currentBudgetList, setCurrentBudgetList] = useState(budgetList);
   const [searchKey, setSearchKey] = useState({});
+
+  useEffect(() => {
+    let { key, filter } = searchKey;
+
+    console.log(searchKey);
+    let modifiedList = budgetList.filter(({ title, tag, money, date }) => {
+      if (!key) return true;
+      if (title === key && filter === 'Title') return true;
+      if (tag === key && filter === 'Tags') return true;
+      if (money === key && filter === 'Cost') return true;
+      if (date === key && filter === 'Date') return true;
+    });
+
+    console.log(modifiedList);
+
+    setCurrentBudgetList(modifiedList);
+  }, [searchKey]);
 
   return (
     <div className={budgetStyle.budgetBody}>

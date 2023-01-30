@@ -2,12 +2,13 @@
 
 import filtersStyle from './css/Filters.module.css';
 
-const filters = ['Name', 'Tags', 'Cost', 'Date'];
+const filters = ['Title', 'Tags', 'Cost', 'Date'];
 
-export default function Filters({ currentTag, setCurrentTag, setValue }) {
+export default function Filters({ currentTag, setCurrentTag, setValue, setSearchKey }) {
   const handleClick = filter => {
     setCurrentTag(filter);
     setValue('');
+    setSearchKey({});
   };
 
   return (

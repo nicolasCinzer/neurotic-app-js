@@ -1,9 +1,10 @@
 'use client';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import itemStyle from './css/BudgetList.module.css';
 
-export default function ItemList({ list }) {
+export default function ItemList({ list, searchKey }) {
   const router = useRouter();
 
   return (
