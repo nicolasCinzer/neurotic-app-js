@@ -1,0 +1,20 @@
+.filtersBody {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  width: 30%;
+}
+
+.filter {
+  padding: 8px 16px;
+  border: 1px solid var(--primary-btn-bord);
+  border-radius: 20px;
+  font-family: var(--font-dmsans);
+  font-size: 14px;
+  background: var(--second-bg);
+}
+
+.filter:hover {
+  border: 1px solid var(--primary-btn-bord);
+  background: var(--buttons-hover);
+}

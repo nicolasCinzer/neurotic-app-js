@@ -1,5 +1,4 @@
-import budgetStyle from './css/BudgetPage.module.css';
-import BudgetList from 'components/budget/page/BudgetList';
+import BudgetBody from 'components/budget/page/BudgetBody';
 
 const sample = [
   { id: 1, title: 'Mercado', tag: 'Market', money: '5000 COP', date: '24/1/2023' },
@@ -16,10 +15,16 @@ const sample = [
   { id: 12, title: 'Ropa', tag: 'Clothes', money: '5000 COP', date: '24/1/2023' },
 ];
 
-export default function Budget() {
+// const getBudgetList = () => {
+//   return fetch().then(res => res.json());
+// };
+
+export default async function Budget() {
+  // const budgetList = await getBudgetList();
+
   return (
     <>
-      <BudgetList list={sample} />
+      <BudgetBody budgetList={sample} />
     </>
   );
 }

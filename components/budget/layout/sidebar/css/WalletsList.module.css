@@ -1,0 +1,20 @@
+.walletsBody {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-dmsans);
+  align-items: center;
+  gap: 12px;
+  width: 80%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 50px;
+  border-bottom: 3px solid var(--second-btn-bord);
+  border-radius: 25px;
+  background: var(--second-bg);
+  width: 100%;
+}

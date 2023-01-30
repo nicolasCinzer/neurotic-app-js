@@ -1,0 +1,14 @@
+.tagsBody {
+  display: flex;
+  gap: 18px;
+  padding: 15px 5px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  width: 50%;
+  box-shadow: inset 0 9px 0px 0px var(--primary-bg), inset 0 -9px 0px 0px var(--primary-bg), inset 12px 0 15px -4px rgb(28, 28, 28),
+    inset -12px 0 15px -4px rgb(28, 28, 28);
+  border-radius: 8px;
+  margin-left: 8px;
+  float: left;
+}
+

@@ -1,0 +1,10 @@
+.CRUDBody {
+    display: flex;
+    padding: 20px 24px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    font-family: var(--font-dmsans);
+  }
+  
+  

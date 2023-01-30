@@ -1,0 +1,19 @@
+.walletCard {
+  padding: 12px 24px;
+  border: 1px solid var(--primary-btn-bord);
+  border-radius: 35px;
+  background: var(--second-bg);
+  width: 100%;
+}
+
+.walletCard:hover {
+  background: var(--buttons-hover);
+}
+
+.walletTitle {
+  font-size: 20px;
+}
+
+.walletMoney {
+  font-size: 12px;
+}

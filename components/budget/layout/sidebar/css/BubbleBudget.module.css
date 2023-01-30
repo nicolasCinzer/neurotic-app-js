@@ -1,0 +1,20 @@
+.currentBudget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92%;
+  padding: 16px;
+  border-bottom: 2px solid var(--second-btn-bord);
+  border-radius: 16px;
+  gap: 4px;
+  font-size: 22px;
+  background: var(--second-bg);
+  font-family: var(--font-dmsans);
+  box-shadow: 0px 6px 15px 0px var(--second-btn-bord);
+}
+
+.budget {
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.17);
+}

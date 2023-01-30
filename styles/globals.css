@@ -1,3 +1,13 @@
+:root {
+  --primary-bg: #212121;
+  --second-bg: #282828;
+  --primary-btn-bord: #353535;
+  --second-btn-bord: #0000003b;
+  --core-color: #800080d1;
+  --core-bord: #505;
+  --buttons-hover: #313030e6;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -24,6 +34,6 @@ a {
   }
   body {
     color: white;
-    background: #212121;
+    background: var(--primary-bg);
   }
 }

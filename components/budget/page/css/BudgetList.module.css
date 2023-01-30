@@ -9,10 +9,14 @@
 .itemBody {
   display: grid;
   grid-template-columns: 6fr 1fr 1fr 1fr;
-  border-bottom: 3px solid #0000003b;
+  border-bottom: 3px solid var(--second-btn-bord);
   border-radius: 29px;
   margin-bottom: 12px;
-  background: #262626e6;
+  background: var(--second-bg);
+}
+
+.itemBody:hover {
+  background: var(--buttons-hover);
 }
 
 .itemTitle::before {
@@ -50,7 +54,7 @@
   padding: 6px 12px;
   font-size: 14px;
   font-family: var(--font-dmsans);
-  background-color: blue;
-  border: 0;
+  background: var(--core-color);
+  border: 1px solid var(--core-bord);
   border-radius: 24px;
 }
