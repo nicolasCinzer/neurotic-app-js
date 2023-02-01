@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import sidebarStyle from './css/Sidebar.module.css';
 
@@ -7,14 +7,18 @@ import BubbleBudget from './BubbleBudget';
 import WalletsList from './WalletsList';
 import Debts from './Debts';
 
-export default function Sidebar({debts, wallets, currentBudg}) {
+export default function Sidebar({ debts, wallets, currentBudg }) {
   const [currentBudget, setCurrentBudget] = useState('0');
+
+  useEffect(() => {
+    setCurrentBudget(currentBudg);
+  }, []);
 
   return (
     <div className={sidebarStyle.sidebarBody}>
       <BubbleBudget currentBudget={currentBudget} />
-      <WalletsList />
-      <Debts />
+      <WalletsList wallets={wallets} />
+      <Debts debts={debts} />
     </div>
   );
 }

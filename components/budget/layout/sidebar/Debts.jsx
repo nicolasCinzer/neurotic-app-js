@@ -1,11 +1,19 @@
-export default function Debts({ contact, debt }) {
+export default function Debts({ debts }) {
+  console.log(debts);
+
   return (
     <div>
       Debts
-      <div>
-        {contact}
-        {debt}
-      </div>
+      {Object.keys(debts).map(debtor => {
+        console.log(debtor);
+        return (
+          <div>
+            {debtor}
+            {debts[debtor].debt}
+            {debts[debtor].lastDate}
+          </div>
+        );
+      })}
     </div>
   );
 }
