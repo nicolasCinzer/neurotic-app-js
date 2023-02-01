@@ -16,7 +16,6 @@ export default function SearchEngine({ setSearchKey }) {
 
   const handleKeyDown = ({ key }) => {
     if (key === 'Enter') {
-      console.log(key);
       setSearchKey({ key: `${value}`, filter: currentTag });
     }
   };
