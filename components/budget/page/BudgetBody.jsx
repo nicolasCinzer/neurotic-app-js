@@ -9,13 +9,13 @@ import Tags from './Tags';
 import CRUD from './CRUD';
 
 export default function Budget({ budgetList }) {
-  const [currentBudgetList, setCurrentBudgetList] = useState(budgetList);
+  const [currentBudgetList, setCurrentBudgetList] = useState(budgetList.list);
   const [searchKey, setSearchKey] = useState({});
 
   useEffect(() => {
     let { key, filter } = searchKey;
 
-    let modifiedList = budgetList.filter(({ title, tag, money, date }) => {
+    let modifiedList = budgetList.list.filter(({ title, tag, money, date }) => {
       if (!key) return true;
       if (title === key && filter === 'Title') return true;
       if (tag === key && filter === 'Tags') return true;
@@ -29,7 +29,10 @@ export default function Budget({ budgetList }) {
   return (
     <div className={budgetStyle.budgetBody}>
       <SearchEngine setSearchKey={setSearchKey} />
-      <BudgetList list={currentBudgetList} />
+      <BudgetList
+        list={currentBudgetList}
+        walletName={budgetList.name}
+      />
       <Tags />
       <CRUD />
     </div>

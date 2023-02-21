@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import itemStyle from './css/BudgetList.module.css';
 
-export default function ItemList({ list, searchKey }) {
+export default function ItemList({ list, walletName }) {
   const router = useRouter();
 
   return (
@@ -13,7 +13,7 @@ export default function ItemList({ list, searchKey }) {
         <li
           className={itemStyle.itemBody}
           key={id}
-          onClick={() => router.push(`/budget/${id}`)}
+          onClick={() => router.push(`/budget/wallets/${walletName}/${id}`)}
         >
           <div className={itemStyle.itemTitle}>{title}</div>
           <div className={itemStyle.itemTagBox}>

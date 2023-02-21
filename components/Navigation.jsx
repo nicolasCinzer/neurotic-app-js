@@ -10,7 +10,7 @@ const links = [
   },
   {
     label: 'Budget',
-    route: '/budget',
+    route: '/budget/wallets',
   },
 ];
 
