@@ -7,16 +7,16 @@ export default function Debts({ debts }) {
   return (
     <div className={debtsStyle.debtBody}>
       Debts
-      {Object.keys(debts).map(debtor => {
+      {debts.map(debtor => {
         return (
           <div
             className={debtsStyle.debtItem}
-            onClick={() => router.push(`/budget/debts/${debtor}`)}
-            key={debtor}
+            onClick={() => router.push(`/budget/debts/${debtor.name}`)}
+            key={debtor.id}
           >
-            <div className={debtsStyle.debtTitle}>{debtor}</div>
-            <div className={debtsStyle.debtMoney}>{debts[debtor].debt}</div>
-            <div className={debtsStyle.debtDate}>{new Date(debts[debtor].lastDate * 1000).toLocaleDateString('en-US')}</div>
+            <div className={debtsStyle.debtTitle}>{debtor.name}</div>
+            <div className={debtsStyle.debtMoney}>{debtor.debt}</div>
+            <div className={debtsStyle.debtDate}>{new Date(debtor.lastDate * 1000).toLocaleDateString('en-US')}</div>
           </div>
         );
       })}

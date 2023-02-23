@@ -19,6 +19,10 @@
   background-color: var(--second-bg);
 }
 
+.debtItem:hover {
+  background-color: var(--buttons-hover);
+}
+
 .debtTitle {
   grid-area: title;
   font-size: 18px;

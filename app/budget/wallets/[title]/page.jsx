@@ -1,20 +1,22 @@
 import BudgetBody from 'components/budget/page/BudgetBody';
 
-const getBudgetList = () => {
-  return fetch('https://my-json-server.typicode.com/nicolasCinzer/neurotic-fake-api/budget').then(res => res.json());
+const getWallet = name => {
+  return fetch(`https://my-json-server.typicode.com/nicolasCinzer/neurotic-fake-api/wallets?name=${name}`).then(res => res.json());
+};
+
+const getItems = async id => {
+  return fetch(`https://my-json-server.typicode.com/nicolasCinzer/neurotic-fake-api/wallets/${id}/items`).then(res => res.json());
 };
 
 export default async function Wallet({ params }) {
-  const list = await getBudgetList();
+  const wallet = await getWallet(params.title);
+  const items = await getItems(wallet[0].id);
 
   return (
     <>
       <BudgetBody
-        budgetList={
-          list.wallets.filter(({ name }) => {
-            return name === params.title;
-          })[0]
-        }
+        budgetList={items}
+        walletId={params.title}
       />
     </>
   );

@@ -1,11 +1,11 @@
 import { redirect } from 'next/navigation';
 
-const getBudgetList = () => {
-  return fetch('https://my-json-server.typicode.com/nicolasCinzer/neurotic-fake-api/budget').then(res => res.json());
+const getFirstWallet = () => {
+  return fetch('https://my-json-server.typicode.com/nicolasCinzer/neurotic-fake-api/wallets').then(res => res.json());
 };
 
 export default async function Wallets() {
-  const budgetList = await getBudgetList();
+  const firstWallet = await getFirstWallet();
 
-  redirect(`budget/wallets/${budgetList.wallets[0].name}`);
+  redirect(`budget/wallets/${firstWallet[0].name}`);
 }
